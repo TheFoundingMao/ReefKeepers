@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Background</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+    }
+
+    #video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      z-index: -1;
+      opacity: 1;
+      border: 0px solid #fff;
+    }
+
+    #content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    /* Styles for the image wrapper */
+    #image-wrapper-blue, #image-wrapper-green, #image-wrapper-pink, #image-wrapper-purple, #image-wrapper-info {
+      position: fixed;
+      z-index: 1;
+      overflow: visible;
+      width: 20%;
+      height: 20%;
+    }
+
+    #image-wrapper-blue {
+      bottom: 20px;
+      left: 20px;
+    }
+
+    #image-wrapper-green {
+      bottom: 280px;
+      left: 20px;
+    }
+
+    #image-wrapper-pink {
+      bottom: 20px;
+      left: 500px;
+    }
+
+    #image-wrapper-purple {
+      bottom: 280px;
+      left: 500px;
+    }
+
+    #image-wrapper-info {
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      height: 50%;
+      background-image: url('Info Sheet.png');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    /* Styles for the image and hover effect using ::before pseudo-element */
+    #image-wrapper-blue::before, #image-wrapper-green::before, #image-wrapper-pink::before, #image-wrapper-purple::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    #image-wrapper-blue::before {
+      background-image: url('Buttons Blue.png');
+    }
+
+    #image-wrapper-green::before {
+      background-image: url('Buttons Green.png');
+    }
+
+    #image-wrapper-pink::before {
+      background-image: url('Buttons Pink.png');
+    }
+
+    #image-wrapper-purple::before {
+      background-image: url('Buttons Purple.png');
+    }
+
+    #image-wrapper-blue:hover::before, #image-wrapper-green:hover::before, #image-wrapper-pink:hover::before, #image-wrapper-purple:hover::before {
+      transform: scale(1.4);
+    }
+  </style>
+</head>
+<body>
+  <video id="video-bg" autoplay loop muted>
+    <source src="Lidar.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div id="content">
+    <h1></h1>
+    <p></p>
+  </div>
+
+
+  <!-- Add the following HTML to create the image wrapper -->
+  <div id="image-wrapper-blue"></div>
+  <div id="image-wrapper-green"></div>
+  <div id="image-wrapper-pink"></div>
+  <div id="image-wrapper-purple"></div>
+  <div id="image-wrapper-info"></div>
+</body>
+
+
+  <!-- Add the following HTML to create the image wrapper -->
+  <div id="image-wrapper-blue"></div>
+  <div id="image-wrapper-green"></div>
+  <div id="image-wrapper-pink"></div>
+  <div id="image-wrapper-purple"></div>
+  <div id="image-wrapper-info"></div>
+</body>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Background</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+    }
+
+    #video-bg, #video-bg-right {
+      position: fixed;
+      top: 0;
+      width: 50%;
+      height: 50%;
+      z-index: -1;
+      opacity: 1;
+      border: 0px solid #fff;
+    }
+
+    #video-bg {
+      left: 0;
+    }
+
+    #video-bg-right {
+      right: 0;
+    }
+
+    /* Add the rest of your CSS code here */
+  </style>
+</head>
+<body>
+  <video id="video-bg" autoplay loop muted>
+    <source src="Lidar.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video id="video-bg-right" autoplay loop muted>
+    <source src="Ph temp.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
